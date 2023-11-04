@@ -1,21 +1,3 @@
----
-language: bqn
-permalink: bqn
-contributors:
-    - ["Raghu Ranganathan", "https://github.com/razetime"]
-translators:
----
-
-BQN is a modern array language (similar to APL) that aims to eliminate burdensome aspects of the APL tradition.
-
-It is recommended to try these code examples out in a REPL. The [online REPL](https://mlochbaum.github.io/BQN/try.html) is 
-recommended for quick start, since it comes with keyboard and easy to access help. You can try building 
-[CBQN](https://github.com/dzaima/CBQN) for a local install, but it will need keyboard setup.
-
-[Source File](https://github.com/razetime/learnxinyminutes-docs/blob/gh-pages/docs/learnbqn.bqn)
-
-```bqn
-
 # This is a comment.
 # The characters ',' and `⋄` are statement separators.
 
@@ -282,10 +264,3 @@ IfElse  ← {c‿T‿F: c◶F‿T@}         # Used as IfElse ⟨Condition, Block
 While ← {𝕩{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}𝕨@}´  # While 1‿{... to run forever
 DoWhile ← {𝕏@ ⋄ While 𝕨‿𝕩}´
 # A For loop can be done with ¨, functions need not be pure.
-```
-
-## Ready for more?
-- [Quickstart guide](https://mlochbaum.github.io/BQN/doc/quick.html)
-- [Full length, explained documentation](https://mlochbaum.github.io/BQN/doc/index.html)
-- [Short docs](https://mlochbaum.github.io/BQN/help/index.html)
-- [BQN community!](https://mlochbaum.github.io/BQN/community/index.html)
