@@ -1,6 +1,6 @@
 ---
 language: bqn
-filename: learnbqn.bqn
+permalink: bqn
 contributors:
     - ["Raghu Ranganathan", "https://github.com/razetime"]
 translators:
