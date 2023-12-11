@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "BQN386";
+  src: url("./BQN386.woff2");
+}
+
+body {
+	font-size: 1.7rem;
+}
+
+code {
+
+	font-family: "BQN386";
+  overflow-x: scroll;
+}
+pre {
+}

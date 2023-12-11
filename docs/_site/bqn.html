@@ -1,22 +1,28 @@
----
-layout: page
-language: bqn
-permalink: bqn
-contributors:
-    - ["Raghu Ranganathan", "https://github.com/razetime"]
-translators:
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BQN</title>
 
-BQN is a modern array language (similar to APL) that aims to eliminate burdensome aspects of the APL tradition.
+    <link
+      rel="stylesheet"
+      href="/skeleton.css">
+    />
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <p>BQN is a modern array language (similar to APL) that aims to eliminate burdensome aspects of the APL tradition.</p>
 
-It is recommended to try these code examples out in a REPL. The [online REPL](https://mlochbaum.github.io/BQN/try.html) is 
+<p>It is recommended to try these code examples out in a REPL. The <a href="https://mlochbaum.github.io/BQN/try.html">online REPL</a> is 
 recommended for quick start, since it comes with a BQN keyboard and easy to access help. You can try building
-[CBQN](https://github.com/dzaima/CBQN) for a local install, but it will need keyboard or editor setup.
+<a href="https://github.com/dzaima/CBQN">CBQN</a> for a local install, but it will need keyboard or editor setup.</p>
 
-[Source File](https://github.com/razetime/learnxinyminutes-docs/blob/gh-pages/docs/learnbqn.bqn)
+<p><a href="https://github.com/razetime/learnxinyminutes-docs/blob/gh-pages/docs/learnbqn.bqn">Source File</a></p>
 
-```bqn
-
+<pre><code class="language-bqn">
 # This is a comment.
 # The characters ',' and `⋄` are statement separators.
 
@@ -161,7 +167,7 @@ array_or_atom {2⋆𝕩}↩  #≡ ⟨ 0.125, 0.0625, 0.03125 ⟩
 ## Logic Functions
 ##  Booleans are just 1 and 0.
 ∧, ∨, ¬       # For Booleans
-≤, <, >, ≥, = # Vectorizing comparisons
+≤, &lt;, &gt;, ≥, = # Vectorizing comparisons
 ≡, ≢          # Nonvectorizing comparisons 
 
 ## Array manipulation Functions
@@ -224,7 +230,7 @@ a⋈b           #≡ ⟨1‿2‿3, 4‿5⟩
   𝕊 𝕩: 𝕩×𝕊 𝕩-1 
 }
 { # Factorial with predicates
-  𝕩<2 ? 1; # Similar to an if-else pattern.
+  𝕩&lt;2 ? 1; # Similar to an if-else pattern.
   𝕩×𝕊 𝕩-1
 }
 
@@ -279,8 +285,8 @@ n.a # ERROR
 # There are two main ways to define a conditional.
 ## Predicate headers
 {
-  𝕩 > 2:  "greater than 2";
-  𝕩 < 2: "lesser than 2";
+  𝕩 &gt; 2:  "greater than 2";
+  𝕩 &lt; 2: "lesser than 2";
   "equal to 2"
 }
 
@@ -289,7 +295,7 @@ n.a # ERROR
 #  - 𝔾: list of functions that serve as bodies
 #  - 𝔽: condition function that specifies which function from 𝔾 to select
 #  The same conditional as above would be:
-{⊑/⟨𝕩>2, 𝕩<2, 𝕩=2⟩}◶⟨
+{⊑/⟨𝕩&gt;2, 𝕩&lt;2, 𝕩=2⟩}◶⟨
   {𝕊: "greater than 2"}
   {𝕊: "lesser than 2"}
   {𝕊: "equal to 2"}
@@ -306,10 +312,19 @@ IfElse  ← {c‿T‿F: c◶F‿T@}         # Used as IfElse ⟨Condition, Block
 While ← {𝕩{𝔽⍟𝔾∘𝔽_𝕣_𝔾∘𝔽⍟𝔾𝕩}𝕨@}´  # While 1‿{... to run forever
 DoWhile ← {𝕏@ ⋄ While 𝕨‿𝕩}´
 # A For loop can be done with ¨, functions need not be pure.
-```
+</code></pre>
 
-## Ready for more?
-- [Quickstart guide](https://mlochbaum.github.io/BQN/doc/quick.html)
-- [Full length, explained documentation](https://mlochbaum.github.io/BQN/doc/index.html)
-- [Short docs](https://mlochbaum.github.io/BQN/help/index.html)
-- [BQN community!](https://mlochbaum.github.io/BQN/community/index.html)
+<h2 id="ready-for-more">Ready for more?</h2>
+<ul>
+  <li><a href="https://mlochbaum.github.io/BQN/doc/quick.html">Quickstart guide</a></li>
+  <li><a href="https://mlochbaum.github.io/BQN/doc/index.html">Full length, explained documentation</a></li>
+  <li><a href="https://mlochbaum.github.io/BQN/help/index.html">Short docs</a></li>
+  <li><a href="https://mlochbaum.github.io/BQN/community/index.html">BQN community!</a></li>
+</ul>
+
+    </div>
+    <div class="container">
+      <a href="https://razetime.github.io/footer.html">Footer</a>
+    </div>
+  </body>
+</html>
