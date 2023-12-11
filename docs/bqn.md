@@ -5,11 +5,13 @@ contributors:
     - ["Raghu Ranganathan", "https://github.com/razetime"]
 translators:
 ---
-
+<html>
+<head></head>
+<body>
 BQN is a modern array language (similar to APL) that aims to eliminate burdensome aspects of the APL tradition.
 
 It is recommended to try these code examples out in a REPL. The [online REPL](https://mlochbaum.github.io/BQN/try.html) is 
-recommended for quick start, since it comes with keyboard and easy to access help. You can try building 
+recommended for quick start, since it comes with a BQN keyboard and easy to access help. You can try building
 [CBQN](https://github.com/dzaima/CBQN) for a local install, but it will need keyboard setup.
 
 [Source File](https://github.com/razetime/learnxinyminutes-docs/blob/gh-pages/docs/learnbqn.bqn)
@@ -27,15 +29,16 @@ recommended for quick start, since it comes with keyboard and easy to access hel
 1,2,3,4   
 ¯1,¯2,¯3  # Negative numbers are written with a high minus
 π,∞,¯π,¯∞ # Pi and Infinity are defined constants
-1_234_456 # You can add underscores in between numbers 
+1_234_456 # Underscores are allowed in numbers
           # This does not change their value
 1.3E4     # Scientific notation is supported
 
 # Characters
 'a','⥊'   
 '
-'         # Yes, you can put *any* character in a character literal
+'         # A newline. Yes, you can put *any* character in a character literal
 @         # Null character ('\0' in C)
+
 # Arrays
 1‿2‿3       # Stranding, good for simple lists
 ⟨1,2,3⟩     # General list notation
@@ -49,6 +52,7 @@ recommended for quick start, since it comes with keyboard and easy to access hel
 "newline
 separated"  # Allows newlines
 "quo""tes"  # Escape a double quote by typing it twice
+
 # Functions 
 1{𝕨+𝕩}3       # All functions are infix  
               # 𝕨 is left argument, 𝕩 is right argument
@@ -83,7 +87,10 @@ separated"  # Allows newlines
 # longer trains are complex arrangements of these patterns, involving constants and Nothing (·).
 # Read more about trains at https://mlochbaum.github.io/BQN/doc/train.html
 
-# Evaluation order:
+####################
+# Evaluation order #
+####################
+
 #  BQN evaluates functions right to left with no precedence rules governing *functions*. Functions are what
 #  one would call operators in a mainstream language. 
 1÷2+3       # 1÷(2+3)   = 0.2
@@ -95,7 +102,10 @@ separated"  # Allows newlines
 +
 1+˜2+○-∘×3  # 1(+˜)(2((+○-)∘×)3)
 
-# Variables
+#############
+# Variables #
+#############
+
 #  Since the case of a variable matters to determine what it means, BQN variables are *case insensitive*
 #  The case that a variable is written in can change the way it is interpreted by BQN.
 #  Eg. `F` refers to a value as a callable function, whereas `f` refers to the same variable as just a value.
@@ -118,6 +128,7 @@ array_or_atom {2⋆𝕩}↩  #≡ ⟨ 0.125, 0.0625, 0.03125 ⟩
 ##################
 # BQN Primitives #
 ##################
+
 # All of BQN's base primitives are a single character long. Refer to https://mlochbaum.github.io/BQN/help/index.html for
 # examples.
 # Here we will look at a few primitives from each section. You will want to consult the docs for detailed explanations.
@@ -138,7 +149,8 @@ array_or_atom {2⋆𝕩}↩  #≡ ⟨ 0.125, 0.0625, 0.03125 ⟩
 'a'-'d'       #≡ ¯3 
 
 ## Logic Functions
-∧, ∨, ¬       # For Booleans, retrun 1 or 0
+##  Booleans are just 1 and 0.
+∧, ∨, ¬       # For Booleans
 ≤, <, >, ≥, = # Vectorizing comparisons
 ≡, ≢          # Nonvectorizing comparisons 
 
@@ -289,3 +301,4 @@ DoWhile ← {𝕏@ ⋄ While 𝕨‿𝕩}´
 - [Full length, explained documentation](https://mlochbaum.github.io/BQN/doc/index.html)
 - [Short docs](https://mlochbaum.github.io/BQN/help/index.html)
 - [BQN community!](https://mlochbaum.github.io/BQN/community/index.html)
+</body></html>
