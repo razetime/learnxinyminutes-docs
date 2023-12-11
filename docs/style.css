@@ -12,4 +12,6 @@ pre {
   overflow-x: scroll;
 }
 
-    
+code { 
+	font-family: "BQN386";
+}
