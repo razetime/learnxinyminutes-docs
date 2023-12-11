@@ -7,10 +7,9 @@ body {
 	font-size: 1.7rem;
 }
 
-code {
-
+pre {
 	font-family: "BQN386";
   overflow-x: scroll;
 }
-pre {
-}
+
+    
